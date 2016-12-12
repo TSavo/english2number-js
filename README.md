@@ -40,4 +40,4 @@ toNumber("seventy-seventh") // 77
 [numeral.js](http://numeraljs.com/) is an amazing library for dealing with numerals, but it lacks support for english parsing.
 
 # Contributing
-Pull requests are welcome, please file any bugs on https://github.com/tsavo/proportionate-js
+Pull requests are welcome, please file any bugs on https://github.com/tsavo/english2numbers-js
