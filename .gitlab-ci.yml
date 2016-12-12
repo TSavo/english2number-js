@@ -1,0 +1,9 @@
+image: node:7.1
+
+all_tests:
+  script:
+   - npm install
+   - npm test
+   - npm run-script codacy
+   - npm run-script codeclimate
+   

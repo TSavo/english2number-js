@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "6.9.2"
+  - 6
+  - "7.2.1"
+  - 7
+  
+env:
+  - XUNIT_FILE=shippable/testresults/result.xml
+build:
+  ci:
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
+
+    - npm install
+    
+    #Run tests
+    - npm test
+
+    #Generate coverage report with istanbul
+    - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- test --ui=bdd --reporter=xunit-file
+    - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/

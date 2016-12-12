@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: 6.1.0
+  environment:
+    MOCHA_FILE: $CIRCLE_TEST_REPORTS/test-results.xml
+
+test:
+  override:
+    - mocha test --reporter mocha-circleci-reporter

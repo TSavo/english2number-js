@@ -1,0 +1,10 @@
+steps:
+  - plugin: Script
+    name: Install NVM, run tests
+    script: |
+      apt-get update
+      curl -sL https://deb.nodesource.com/setup_7.x -o setup_7.x
+      . setup_7.x
+      apt-get install nodejs
+      npm install
+      npm test
