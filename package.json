@@ -1,7 +1,7 @@
 {
   "name": "english2number",
   "version": "0.0.1",
-  "description": "Convenience methods for dealing with proportions (a part, share, or number considered in comparative relation to a whole).",
+  "description": "Converts English words to numbers. Supports \"zero\" - \"one hundred\", \"zeroth\" - \"one-hundredth\" and \"0th\" - \"one-hundredth\".",
   "main": "lib/index.js",
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test -R spec",
@@ -23,6 +23,8 @@
     "english2numbers",
     "natural language",
     "numeral",
+    "convert",
+    "convert English to numbers",
     "Nth"
   ],
   "author": "Travis Savo <evilgenius@nefariousplan.com>",
