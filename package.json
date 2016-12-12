@@ -1,7 +1,7 @@
 {
   "name": "english2number",
   "version": "0.1.0",
-  "description": "Converts English words to numbers. Supports \"zero\" - \"one hundred\", \"zeroth\" - \"one-hundredth\" and \"0th\" - \"one-hundredth\".",
+  "description": "Converts English words to numbers.",
   "main": "lib/index.js",
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test -R spec",
