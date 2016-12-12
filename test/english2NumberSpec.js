@@ -5,10 +5,10 @@ var should = chai.should();
 var toNumber = require("../lib");
 
 describe("english2number", function() {
-    it("should return undefined when the value is out of range", function(){
-        should.equal(toNumber("x"), undefined);
-        should.equal(toNumber("-1"), undefined);
-        should.equal(toNumber("200"), undefined);
+    it("should throw when the value is not a valid number", function(){
+        +function(){
+            toNumber("This isn't a valid number 100.");
+        }.should.throw();
     });
     it("should give right answers for numbers", function(){
         toNumber("0").should.equal(0);
@@ -59,7 +59,15 @@ describe("english2number", function() {
         toNumber("eight").should.equal(8);
         toNumber("nine").should.equal(9);
         toNumber("ten").should.equal(10);
+        toNumber("eleven").should.equal(11);
+        toNumber("twelve").should.equal(12);
+        toNumber("thirteen").should.equal(13);
+        toNumber("fourteen").should.equal(14);
         toNumber("fifteen").should.equal(15);
+        toNumber("sixteen").should.equal(16);
+        toNumber("seventeen").should.equal(17);
+        toNumber("eighteen").should.equal(18);
+        toNumber("nineteen").should.equal(19);
         toNumber("twenty").should.equal(20);
         toNumber("twenty-five").should.equal(25);
         toNumber("twenty five").should.equal(25);
@@ -67,6 +75,8 @@ describe("english2number", function() {
         toNumber("forty four").should.equal(44);
         toNumber("seventy").should.equal(70);
         toNumber("seventy-seven").should.equal(77);
+        toNumber("eighty eight").should.equal(88);
+        toNumber("ninety nine").should.equal(99);
         toNumber("one-hundred").should.equal(100);
         toNumber("one hundred").should.equal(100);
     });
@@ -82,12 +92,47 @@ describe("english2number", function() {
         toNumber("eighth").should.equal(8);
         toNumber("ninth").should.equal(9);
         toNumber("tenth").should.equal(10);
+        toNumber("eleventh").should.equal(11);
+        toNumber("twelfth").should.equal(12);
+        toNumber("thirteenth").should.equal(13);
+        toNumber("fourteenth").should.equal(14);
         toNumber("fifteenth").should.equal(15);
+        toNumber("sixteenth").should.equal(16);
+        toNumber("seventeenth").should.equal(17);
+        toNumber("eighteenth").should.equal(18);
+        toNumber("nineteenth").should.equal(19);
+        toNumber("twentieth").should.equal(20);
+        toNumber("twenty first").should.equal(21);
+        toNumber("twenty second").should.equal(22);
+        toNumber("twenty third").should.equal(23);
+        toNumber("twenty fourth").should.equal(24);
         toNumber("twenty-fifth").should.equal(25);
         toNumber("forty-fourth").should.equal(44);
         toNumber("seventieth").should.equal(70);
         toNumber("seventy-seventh").should.equal(77);
+        toNumber("ninetieth").should.equal(90);
+        toNumber("ninety ninth").should.equal(99);
         toNumber("one-hundredth").should.equal(100);
+    });
+
+    it("should give the right value for a very large complex number", function(){
+        toNumber("one hundred and twenty-three septillion, four hundred and fifty-six sextillion, seven hundred and eighty-nine quintillion, one hundred and twenty-three quadrillion, four hundred and fifty-six trillion, seven hundred and eighty-nine billion, one hundred and twenty-three million, four hundred and fifty-six thousand and seven hundred and eighty-nine").should.equal(123456789123456789123456789);
+    });
+
+    it("should give the right value for cardinal numbers", function(){
+        toNumber("sixty-one trillion, six hundred and eighty-nine billion, four hundred and seventy-three million, four hundred and fifty-three thousand and five hundred and ninety").should.equal(61689473453590);
+    });
+
+    it("should give the right value for cardinal numbers in american form (with ands)", function(){
+        toNumber("sixty-one trillion, six hundred eighty-nine billion, four hundred seventy-three million, four hundred fifty-three thousand, five hundred ninety").should.equal(61689473453590);
+    });
+
+    it("should give the right value for ordinal numbers", function(){
+        toNumber("sixty-one trillion, six hundred and eighty-nine billion, four hundred and seventy-three million, four hundred and fifty-three thousand and five hundred and ninetieth").should.equal(61689473453590);
+    });
+
+    it("should give the right value for cardinal numbers in american form (with ands)", function(){
+        toNumber("sixty-one trillion, six hundred eighty-nine billion, four hundred seventy-three million, four hundred fifty-three thousand, five hundred ninetieth").should.equal(61689473453590);
     });
 });
 
