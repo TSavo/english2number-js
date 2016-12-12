@@ -1,6 +1,6 @@
 {
   "name": "english2number",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Converts English words to numbers. Supports \"zero\" - \"one hundred\", \"zeroth\" - \"one-hundredth\" and \"0th\" - \"one-hundredth\".",
   "main": "lib/index.js",
   "scripts": {
