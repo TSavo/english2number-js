@@ -1,6 +1,7 @@
+
 {
   "name": "english2number",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "Converts English words to numbers.",
   "main": "lib/index.js",
   "scripts": {
