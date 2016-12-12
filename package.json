@@ -28,9 +28,9 @@
   "author": "Travis Savo <evilgenius@nefariousplan.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TSavo/proportionate-js/issues"
+    "url": "https://github.com/TSavo/english2number-js/issues"
   },
-  "homepage": "https://github.com/TSavo/proportionate-js#readme",
+  "homepage": "https://github.com/TSavo/english2number-js#readme",
   "tonicExampleFilename": "example.js",
   "devDependencies": {
     "chai": "^3.5.0",
