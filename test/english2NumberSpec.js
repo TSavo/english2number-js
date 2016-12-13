@@ -134,5 +134,12 @@ describe("english2number", function() {
     it("should give the right value for cardinal numbers in american form (with ands)", function(){
         toNumber("sixty-one trillion, six hundred eighty-nine billion, four hundred seventy-three million, four hundred fifty-three thousand, five hundred ninetieth").should.equal(61689473453590);
     });
+
+    it("should deal with negative numbers", function(){
+        toNumber("negative thirty eight thousand two hundred sixty three").should.equal(-38263);
+        toNumber("- thirty eight thousand two hundred sixty three").should.equal(-38263);
+        toNumber("negative zero").should.equal(-0);
+    });
+
 });
 
