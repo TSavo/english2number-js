@@ -13,5 +13,5 @@ deploy:
     - npm run semantic-release
     - git push --tags
   only:
-    - master@gitlab-org/gitlab-ce
+    - master@tsavo/english2number-js
    
