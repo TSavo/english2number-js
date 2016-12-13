@@ -11,4 +11,5 @@ deploy:
   script:
     - npm install
     - npm run semantic-release
+    - git push --tags
    
