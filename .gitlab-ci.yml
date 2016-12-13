@@ -11,6 +11,7 @@ deploy:
   script:
     - npm install
     - npm run semantic-release
+    - git remote set-url --push origin https://@$GITLAB_SERVER_FQDN/.git
     - git push --tags
   only:
     - master
