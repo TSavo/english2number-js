@@ -12,8 +12,6 @@ Converts English words to numbers.
 
 The following inputs will return this number: 123,456,789,001
 
-- "123,456,789,001" (numerical)
-- "123,456,789,001st" (ordinal)
 - "one hundred and twenty-three billion, four hundred and fifty-six million, seven hundred and eighty-nine thousand and one" (cardinal)
 - "a hundred and twenty-three billion, four hundred and fifty-six million, seven hundred and eighty-nine thousand and one" (cardinal)
 - "one hundred twenty-three billion, four hundred fifty-six million, seven hundred eighty-nine thousand, one" (cardinal)
