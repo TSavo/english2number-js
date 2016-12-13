@@ -12,4 +12,6 @@ deploy:
     - npm install
     - npm run semantic-release
     - git push --tags
+  only:
+    - master@gitlab-org/gitlab-ce
    
